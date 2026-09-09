@@ -1,422 +1,269 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfólio de Alexandre Chain — Analista de Sistemas e Desenvolvedor .NET, C#, Oracle SQL e soluções web." />
-  <meta name="theme-color" content="#0b1120" />
-  <title>Alexandre Chain | Analista de Sistemas & Desenvolvedor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Alexandre Chain — Analista de Sistemas e Desenvolvedor .NET, C#, Oracle SQL e soluções web.">
+  <meta name="theme-color" content="#1c1d20">
+  <title>Alexandre Chain — Analista de Sistemas & Desenvolvedor</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-dot"></span>
+      <span id="loaderText">Olá</span>
+    </div>
+  </div>
+
+  <div class="cursor" id="cursor"><span>Ver</span></div>
   <div class="noise"></div>
 
-  <header class="header" id="header">
-    <nav class="nav container" aria-label="Navegação principal">
-      <a class="logo" href="#inicio" aria-label="Início">
-        <span class="logo-mark">&lt;AC/&gt;</span>
-      </a>
+  <header class="site-header" id="header">
+    <a class="brand magnetic" href="#inicio" aria-label="Ir para o início">
+      <span class="brand-copy">© Código por Alexandre</span>
+    </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <div class="nav-links" id="navLinks">
-        <a href="#sobre">Sobre</a>
-        <a href="#trajetoria">Trajetória</a>
-        <a href="#skills">Skills</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato" class="nav-cta">Contato</a>
-      </div>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#trajetoria">Trajetória</a>
     </nav>
+
+    <button class="menu-button magnetic" id="menuButton" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
   </header>
 
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-panel">
+      <span class="menu-label">Navegação</span>
+      <nav>
+        <a href="#inicio"><span>01</span>Início</a>
+        <a href="#sobre"><span>02</span>Sobre</a>
+        <a href="#projetos"><span>03</span>Projetos</a>
+        <a href="#trajetoria"><span>04</span>Trajetória</a>
+        <a href="#contato"><span>05</span>Contato</a>
+      </nav>
+      <div class="menu-socials">
+        <a href="https://github.com/alehchain" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="mailto:alexandrechaiin@gmail.com">E-mail ↗</a>
+      </div>
+    </div>
+  </div>
+
   <main>
-    <section class="hero section" id="inicio">
-      <div class="hero-glow hero-glow-one"></div>
-      <div class="hero-glow hero-glow-two"></div>
+    <section class="hero" id="inicio">
+      <div class="hero-meta">
+        <div class="location-pill">
+          <span>Brasil</span>
+          <i class="globe">●</i>
+        </div>
+        <p>Analista de Sistemas<br>& Desenvolvedor .NET</p>
+      </div>
 
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <div class="eyebrow"><span class="status-dot"></span> Disponível para novos desafios</div>
+      <div class="portrait-wrap" data-speed="0.9">
+        <div class="portrait-mask">
+          <img src="https://avatars.githubusercontent.com/u/43946461?v=4" alt="Alexandre Chain">
+        </div>
+      </div>
 
-          <p class="hero-kicker">Olá, eu sou</p>
-          <h1>Alexandre <span>Chain</span></h1>
-          <h2>Analista de Sistemas <span class="muted">&</span> Desenvolvedor .NET</h2>
+      <div class="hero-title-wrap">
+        <div class="hero-line">
+          <h1 class="hero-title">Alexandre Chain —</h1>
+          <h1 class="hero-title ghost">Alexandre Chain —</h1>
+        </div>
+      </div>
 
-          <p class="hero-description">
-            Transformo regras de negócio complexas em soluções simples, seguras e eficientes.
-            Atuo principalmente com <strong>C#/.NET</strong>, <strong>Oracle SQL</strong>,
-            APIs e aplicações web corporativas.
-          </p>
+      <div class="hero-bottom">
+        <p class="hero-intro">Construindo soluções que conectam <strong>negócio, software e dados</strong>.</p>
+        <a class="round-link magnetic" href="#sobre" aria-label="Conheça meu trabalho">
+          <span>Sobre<br>mim</span>
+          <i>↘</i>
+        </a>
+      </div>
+    </section>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projetos">
-              Ver meus projetos
-              <span aria-hidden="true">→</span>
+    <section class="intro-section section-light" id="sobre">
+      <div class="container-wide">
+        <div class="intro-grid">
+          <div class="intro-copy">
+            <h2 class="split-text">
+              Transformo regras de negócio complexas em experiências digitais simples, confiáveis e eficientes.
+            </h2>
+          </div>
+          <div class="intro-side">
+            <p>
+              Atuo no desenvolvimento e evolução de sistemas corporativos, APIs, integrações e bancos de dados.
+              Minha principal stack é C#/.NET e Oracle, sempre com atenção à manutenção, performance e experiência de quem usa.
+            </p>
+            <a class="circle-button magnetic" href="#trajetoria">
+              <span>Minha<br>trajetória</span>
             </a>
-            <a class="btn btn-secondary" href="https://github.com/alehchain" target="_blank" rel="noopener noreferrer">
-              GitHub
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-
-          <div class="hero-meta">
-            <div><strong>C# / .NET</strong><span>Back-end</span></div>
-            <div><strong>Oracle SQL</strong><span>Dados</span></div>
-            <div><strong>APIs REST</strong><span>Integrações</span></div>
           </div>
         </div>
 
-        <div class="hero-visual reveal">
-          <div class="profile-orbit">
-            <div class="orbit orbit-one"></div>
-            <div class="orbit orbit-two"></div>
-            <div class="profile-card">
-              <div class="code-label">&lt;developer&gt;</div>
-              <img src="https://avatars.githubusercontent.com/u/43946461?v=4" alt="Alexandre Chain" class="profile-image" />
-              <div class="profile-info">
-                <strong>Alexandre Chain</strong>
-                <span>Systems Analyst • Software Developer</span>
-              </div>
-              <div class="code-label bottom">&lt;/developer&gt;</div>
-            </div>
-            <span class="tech-pill pill-one">.NET</span>
-            <span class="tech-pill pill-two">Oracle</span>
-            <span class="tech-pill pill-three">C#</span>
-          </div>
-        </div>
-      </div>
-
-      <a class="scroll-indicator" href="#sobre" aria-label="Ir para a seção sobre">
-        <span>scroll</span>
-        <i></i>
-      </a>
-    </section>
-
-    <section class="section" id="sobre">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="section-index">01.</span>
-          <h2>Quem sou</h2>
-          <div class="heading-line"></div>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-copy reveal">
-            <p>
-              Sou profissional de tecnologia com experiência no desenvolvimento e sustentação
-              de sistemas corporativos, trabalhando na interseção entre <strong>negócio,
-              software e dados</strong>.
-            </p>
-            <p>
-              No dia a dia, participo da análise de requisitos, desenho de soluções,
-              desenvolvimento de APIs, manutenção de sistemas legados, integrações,
-              consultas e otimizações em banco de dados, além do apoio à operação.
-            </p>
-            <p>
-              Gosto de entender o problema antes do código. Meu foco é construir soluções
-              que façam sentido para quem usa, sejam fáceis de manter e resolvam o problema
-              de forma objetiva.
-            </p>
-          </div>
-
-          <div class="about-cards reveal">
-            <article class="mini-card">
-              <span class="mini-icon">⌘</span>
-              <div>
-                <h3>Back-end</h3>
-                <p>C#, .NET Framework, .NET 8, APIs REST e integrações.</p>
-              </div>
-            </article>
-            <article class="mini-card">
-              <span class="mini-icon">◫</span>
-              <div>
-                <h3>Banco de dados</h3>
-                <p>Oracle SQL, modelagem, consultas, procedures e performance.</p>
-              </div>
-            </article>
-            <article class="mini-card">
-              <span class="mini-icon">◇</span>
-              <div>
-                <h3>Front-end</h3>
-                <p>JavaScript, jQuery, Bootstrap, Select2 e DataTables.</p>
-              </div>
-            </article>
-            <article class="mini-card">
-              <span class="mini-icon">↗</span>
-              <div>
-                <h3>Entrega</h3>
-                <p>Git, GitHub, Azure DevOps, CI/CD e troubleshooting.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="trajetoria">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="section-index">02.</span>
-          <h2>Minha trajetória</h2>
-          <div class="heading-line"></div>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-label">Hoje</span>
-              <h3>Analista de Sistemas & Desenvolvedor</h3>
-              <p>
-                Desenvolvimento e evolução de soluções corporativas, com forte atuação em
-                crédito, cobrança, cadastro, esteiras de decisão e integrações entre sistemas.
-              </p>
-              <div class="tags">
-                <span>C#</span><span>.NET</span><span>Oracle</span><span>REST APIs</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-label">Evolução contínua</span>
-              <h3>Modernização & automação</h3>
-              <p>
-                Migração de rotinas legadas, criação de APIs, melhorias de interface,
-                automação de processos e adoção de práticas que tornam as entregas mais
-                confiáveis e sustentáveis.
-              </p>
-              <div class="tags">
-                <span>.NET 8</span><span>Git</span><span>CI/CD</span><span>Azure DevOps</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-label">Base técnica</span>
-              <h3>Software, dados, redes & IA</h3>
-              <p>
-                Projetos práticos em desenvolvimento, SQL, redes de computadores e
-                inteligência artificial ajudam a ampliar minha visão além do produto em que atuo.
-              </p>
-              <div class="tags">
-                <span>SQL</span><span>Redes</span><span>Python</span><span>IA</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="section-index">03.</span>
-          <h2>Tecnologias & habilidades</h2>
-          <div class="heading-line"></div>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-group reveal">
-            <div class="skill-number">01</div>
+        <div class="expertise">
+          <article>
+            <span>01</span>
             <h3>Back-end</h3>
-            <div class="skill-list">
-              <span>C#</span>
-              <span>.NET Framework 4.8</span>
-              <span>.NET 8</span>
-              <span>ASP.NET / Web API</span>
-              <span>Dapper</span>
-              <span>RestSharp</span>
-              <span>Newtonsoft.Json</span>
-            </div>
+            <p>C#, .NET Framework 4.8, .NET 8, APIs REST, Dapper e integrações.</p>
           </article>
-
-          <article class="skill-group reveal">
-            <div class="skill-number">02</div>
+          <article>
+            <span>02</span>
             <h3>Dados</h3>
-            <div class="skill-list">
-              <span>Oracle Database</span>
-              <span>SQL</span>
-              <span>PL/SQL</span>
-              <span>Modelagem</span>
-              <span>Performance</span>
-              <span>Transações</span>
-            </div>
+            <p>Oracle SQL, PL/SQL, modelagem, transações, análise e otimização de consultas.</p>
           </article>
-
-          <article class="skill-group reveal">
-            <div class="skill-number">03</div>
-            <h3>Front-end</h3>
-            <div class="skill-list">
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JavaScript</span>
-              <span>jQuery</span>
-              <span>Bootstrap</span>
-              <span>DataTables</span>
-              <span>Select2</span>
-            </div>
-          </article>
-
-          <article class="skill-group reveal">
-            <div class="skill-number">04</div>
-            <h3>Ferramentas</h3>
-            <div class="skill-list">
-              <span>Git</span>
-              <span>GitHub</span>
-              <span>Azure DevOps</span>
-              <span>Visual Studio</span>
-              <span>CI/CD</span>
-              <span>Postman</span>
-            </div>
+          <article>
+            <span>03</span>
+            <h3>Experiência Web</h3>
+            <p>JavaScript, jQuery, Bootstrap, Select2, DataTables e interfaces corporativas.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt" id="projetos">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="section-index">04.</span>
-          <h2>Projetos em destaque</h2>
-          <div class="heading-line"></div>
+    <section class="work-section" id="projetos">
+      <div class="container-wide">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Projetos recentes</span>
+            <h2>Trabalhos que<br>contam minha história.</h2>
+          </div>
+          <a class="circle-button dark magnetic" href="https://github.com/alehchain?tab=repositories" target="_blank" rel="noopener noreferrer">
+            <span>Todos os<br>projetos ↗</span>
+          </a>
         </div>
 
-        <div class="projects-grid">
-          <article class="project-card featured reveal">
-            <div class="project-top">
-              <span class="project-icon">{ }</span>
-              <a href="https://github.com/alehchain/cnpj-alfanumerico-validator" target="_blank" rel="noopener noreferrer" aria-label="Abrir CNPJ Alfanumérico Validator no GitHub">↗</a>
-            </div>
-            <span class="project-label">PROJETO EM DESTAQUE</span>
+        <div class="project-list">
+          <a class="project-row cursor-view" href="https://github.com/alehchain/cnpj-alfanumerico-validator" target="_blank" rel="noopener noreferrer">
+            <div class="project-index">01</div>
             <h3>CNPJ Alfanumérico Validator</h3>
-            <p>
-              Biblioteca em C# para validar, formatar, calcular dígitos verificadores
-              e gerar CNPJs numéricos e alfanuméricos fictícios, com testes automatizados
-              e pipeline no GitHub Actions.
-            </p>
-            <div class="project-stack">
-              <span>C#</span><span>.NET 8</span><span>xUnit</span><span>GitHub Actions</span>
-            </div>
-          </article>
+            <div class="project-meta"><span>C# / .NET 8</span><span>2026</span></div>
+            <div class="project-preview preview-code"><span>{ C# }</span></div>
+          </a>
 
-          <article class="project-card reveal">
-            <div class="project-top">
-              <span class="project-icon">SQL</span>
-              <a href="https://github.com/alehchain/sql-bootcamp" target="_blank" rel="noopener noreferrer" aria-label="Abrir SQL Bootcamp no GitHub">↗</a>
-            </div>
+          <a class="project-row cursor-view" href="https://github.com/alehchain/sql-bootcamp" target="_blank" rel="noopener noreferrer">
+            <div class="project-index">02</div>
             <h3>SQL Bootcamp — Oracle</h3>
-            <p>
-              Curso open source de SQL em português com trilha progressiva, 57 módulos,
-              banco fictício de e-commerce e foco em Oracle Database.
-            </p>
-            <div class="project-stack">
-              <span>Oracle</span><span>SQL</span><span>PL/SQL</span><span>Docs</span>
-            </div>
-          </article>
+            <div class="project-meta"><span>Oracle / SQL</span><span>2026</span></div>
+            <div class="project-preview preview-sql"><span>SELECT *</span></div>
+          </a>
 
-          <article class="project-card reveal">
-            <div class="project-top">
-              <span class="project-icon">AI</span>
-              <a href="https://github.com/alehchain/Projeto-3-Inteligencia-Artificial" target="_blank" rel="noopener noreferrer" aria-label="Abrir Projeto de Inteligência Artificial no GitHub">↗</a>
-            </div>
-            <h3>Projeto de Inteligência Artificial</h3>
-            <p>
-              Projeto acadêmico envolvendo o jogo Gomoku e conceitos de inteligência
-              artificial, explorando implementações em Java e Python.
-            </p>
-            <div class="project-stack">
-              <span>IA</span><span>Python</span><span>Java</span><span>Gomoku</span>
-            </div>
-          </article>
+          <a class="project-row cursor-view" href="https://github.com/alehchain/Projeto-3-Inteligencia-Artificial" target="_blank" rel="noopener noreferrer">
+            <div class="project-index">03</div>
+            <h3>Inteligência Artificial</h3>
+            <div class="project-meta"><span>Python / Java</span><span>IA</span></div>
+            <div class="project-preview preview-ai"><span>AI</span></div>
+          </a>
 
-          <article class="project-card reveal">
-            <div class="project-top">
-              <span class="project-icon">NET</span>
-              <a href="https://github.com/alehchain/ServerDNSBind9" target="_blank" rel="noopener noreferrer" aria-label="Abrir Server DNS Bind9 no GitHub">↗</a>
-            </div>
+          <a class="project-row cursor-view" href="https://github.com/alehchain/ServerDNSBind9" target="_blank" rel="noopener noreferrer">
+            <div class="project-index">04</div>
             <h3>Server DNS Bind9</h3>
-            <p>
-              Projeto voltado à configuração e estudo de infraestrutura de redes,
-              utilizando servidor DNS BIND9 e conceitos fundamentais de resolução de nomes.
-            </p>
-            <div class="project-stack">
-              <span>Linux</span><span>DNS</span><span>BIND9</span><span>Redes</span>
-            </div>
-          </article>
+            <div class="project-meta"><span>Linux / Redes</span><span>DNS</span></div>
+            <div class="project-preview preview-network"><span>DNS</span></div>
+          </a>
 
-          <article class="project-card reveal">
-            <div class="project-top">
-              <span class="project-icon">↔</span>
-              <a href="https://github.com/alehchain/Servidor-UDP-TCP" target="_blank" rel="noopener noreferrer" aria-label="Abrir Servidor UDP TCP no GitHub">↗</a>
-            </div>
+          <a class="project-row cursor-view" href="https://github.com/alehchain/Servidor-UDP-TCP" target="_blank" rel="noopener noreferrer">
+            <div class="project-index">05</div>
             <h3>Servidor UDP / TCP</h3>
-            <p>
-              Implementação voltada ao estudo prático de comunicação em rede e diferenças
-              entre os protocolos UDP e TCP.
-            </p>
-            <div class="project-stack">
-              <span>TCP</span><span>UDP</span><span>Sockets</span><span>Redes</span>
-            </div>
-          </article>
+            <div class="project-meta"><span>Sockets / Redes</span><span>TCP/IP</span></div>
+            <div class="project-preview preview-tcp"><span>↔</span></div>
+          </a>
 
-          <article class="project-card reveal">
-            <div class="project-top">
-              <span class="project-icon">⌘</span>
-              <a href="https://github.com/alehchain/Office" target="_blank" rel="noopener noreferrer" aria-label="Abrir projeto Office no GitHub">↗</a>
-            </div>
+          <a class="project-row cursor-view" href="https://github.com/alehchain/Office" target="_blank" rel="noopener noreferrer">
+            <div class="project-index">06</div>
             <h3>Office Deployment</h3>
-            <p>
-              Repositório com arquivos auxiliares e documentação para instalação e
-              configuração do Microsoft Office em ambientes Windows.
-            </p>
-            <div class="project-stack">
-              <span>Windows</span><span>XML</span><span>CLI</span><span>Automação</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="projects-footer reveal">
-          <a class="text-link" href="https://github.com/alehchain?tab=repositories" target="_blank" rel="noopener noreferrer">
-            Ver todos os repositórios no GitHub <span>→</span>
+            <div class="project-meta"><span>Windows / XML</span><span>Automação</span></div>
+            <div class="project-preview preview-office"><span>CMD</span></div>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="section contact-section" id="contato">
-      <div class="contact-glow"></div>
-      <div class="container contact-content reveal">
-        <span class="section-index">05. E agora?</span>
-        <h2>Vamos construir algo<br><span>interessante juntos?</span></h2>
-        <p>
-          Estou sempre aberto a trocar experiências, discutir tecnologia e conhecer
-          novos desafios profissionais.
-        </p>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:alexandrechaiin@gmail.com">Enviar e-mail</a>
-          <a class="btn btn-secondary" href="https://github.com/alehchain" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    <section class="skills-marquee" aria-label="Tecnologias">
+      <div class="marquee-track">
+        <span>C#</span><i>•</i><span>.NET</span><i>•</i><span>ORACLE</span><i>•</i><span>APIs REST</span><i>•</i><span>JAVASCRIPT</span><i>•</i><span>AZURE DEVOPS</span><i>•</i>
+        <span>C#</span><i>•</i><span>.NET</span><i>•</i><span>ORACLE</span><i>•</i><span>APIs REST</span><i>•</i><span>JAVASCRIPT</span><i>•</i><span>AZURE DEVOPS</span><i>•</i>
+      </div>
+    </section>
+
+    <section class="journey-section section-light" id="trajetoria">
+      <div class="container-wide">
+        <span class="eyebrow dark-text">Trajetória</span>
+        <div class="journey-heading">
+          <h2 class="split-text">Do problema de negócio até uma solução em produção.</h2>
+          <p>
+            Minha atuação combina análise, desenvolvimento e sustentação. Gosto de entender o processo inteiro,
+            não apenas a parte do código.
+          </p>
+        </div>
+
+        <div class="timeline-list">
+          <article>
+            <span class="year">Hoje</span>
+            <div>
+              <h3>Analista de Sistemas & Desenvolvedor</h3>
+              <p>Soluções corporativas para crédito, cobrança, cadastro, esteiras de decisão e integrações entre sistemas.</p>
+            </div>
+            <span class="timeline-arrow">↘</span>
+          </article>
+          <article>
+            <span class="year">Evolução</span>
+            <div>
+              <h3>Modernização & Automação</h3>
+              <p>Migração de rotinas legadas, APIs, melhorias de interface, CI/CD e adoção de novas versões do .NET.</p>
+            </div>
+            <span class="timeline-arrow">↘</span>
+          </article>
+          <article>
+            <span class="year">Base</span>
+            <div>
+              <h3>Software, Dados, Redes & IA</h3>
+              <p>Projetos práticos e estudos que ampliam minha visão técnica para além do desenvolvimento de sistemas corporativos.</p>
+            </div>
+            <span class="timeline-arrow">↘</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <div class="contact-bg-word">CHAIN</div>
+      <div class="container-wide contact-inner">
+        <div class="contact-avatar">
+          <img src="https://avatars.githubusercontent.com/u/43946461?v=4" alt="">
+        </div>
+        <h2>Vamos trabalhar<br><span>juntos?</span></h2>
+
+        <div class="contact-rule">
+          <a class="circle-button accent magnetic" href="mailto:alexandrechaiin@gmail.com">
+            <span>Entrar em<br>contato ↗</span>
+          </a>
+        </div>
+
+        <div class="contact-links">
+          <a class="pill-link magnetic" href="mailto:alexandrechaiin@gmail.com">alexandrechaiin@gmail.com</a>
+          <a class="pill-link magnetic" href="https://github.com/alehchain" target="_blank" rel="noopener noreferrer">github.com/alehchain ↗</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>Projetado & desenvolvido por <strong>Alexandre Chain</strong>.</p>
-      <p class="footer-code">&lt;feito com código /&gt;</p>
+  <footer>
+    <div>
+      <span>© 2026 Alexandre Chain</span>
+      <span>Desenvolvido com código & interação</span>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.8/dist/lenis.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
